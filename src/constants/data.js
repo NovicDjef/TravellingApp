@@ -1,19 +1,23 @@
 const carousselData = [
     {
         id: 1,
-        image: require("../assets/images/")
+        image: require("../assets/images/1.jpg")
     },
     {
-        id: 1,
-        image: require("../assets/images/")
+        id: 2,
+        image: require("../assets/images/2.jpg")
     },
     {
-        id: 1,
-        image: require("../assets/images/")
+        id: 3,
+        image: require("../assets/images/3.jpg")
     },
     {
-        id: 1,
-        image: require("../assets/images/")
+        id: 4,
+        image: require("../assets/images/4.jpg")
+    },
+    {
+        id: 5,
+        image: require("../assets/images/5.jpeg")
     }
 ]
 
