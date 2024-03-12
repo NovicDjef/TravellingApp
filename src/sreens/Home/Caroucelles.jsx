@@ -1,25 +1,35 @@
-import { View, Text, FlatList, Image, Dimensions } from 'react-native'
-import React from 'react'
-import {carousselData} from "../../constants/data"
+import * as React from 'react';
+import { Dimensions, Text, View } from 'react-native';
+import Carousel from 'react-native-reanimated-carousel';
 
-export default function Caroucelles() {
-    const screenWidth = Dimensions.get('window').width;
-
-    const renderItem = ({item, index}) => {
-        return(
-            <View>
-                <Image 
-                    source={item.image}
-                    style={{height: 200, width: screenWidth}}
-                />
-            </View>
-        )
-    }
-  return (
-    <View>
-      <FlatList 
-      data={carousselData}
-      renderItem={renderItem}/>
-    </View>
-  )
+function Index() {
+    const width = Dimensions.get('window').width;
+    return (
+        <View style={{ flex: 1 }}>
+            <Carousel
+                loop
+                width={width}
+                height={width / 2}
+                autoPlay={true}
+                data={[...new Array(6).keys()]}
+                scrollAnimationDuration={1000}
+                onSnapToItem={(index) => console.log('current index:', index)}
+                renderItem={({ index }) => (
+                    <View
+                        style={{
+                            flex: 1,
+                            borderWidth: 1,
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <Text style={{ textAlign: 'center', fontSize: 30 }}>
+                            {index}
+                        </Text>
+                    </View>
+                )}
+            />
+        </View>
+    );
 }
+
+export default Index;
