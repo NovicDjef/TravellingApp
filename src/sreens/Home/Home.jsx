@@ -56,7 +56,7 @@ export default function Home() {
 
             }}
           >
-            <Text isDarkMode={isDarkMode} style={{fontWeight: 700}}>Destinations de voyage</Text>
+            <Text isDarkMode={isDarkMode} styles={{fontWeight: 700}}>Destinations de voyage</Text>
             <TouchableOpacity onPress={() => navigation.navigate("listDestination")}>
               <Text isDarkMode={isDarkMode} style={{ color: "skyblue" }}>
                 Tous voir  
@@ -146,7 +146,7 @@ export default function Home() {
 
             }}
           >
-            <Text isDarkMode={isDarkMode} style={{fontWeight: 700}}>Agence de voyage</Text>
+            <Text isDarkMode={isDarkMode} styles={{fontWeight: 700}}>Agence de voyage</Text>
             <Text isDarkMode={isDarkMode} style={{color: "skyblue"}}>Tous voir  <Icon name="chevron-right" size={14} /></Text>
         </View>
        
