@@ -7,11 +7,11 @@ type ThemeProps = {
 };
 
 export function Text(props: TextProps & ThemeProps) {
-  const { isDarkMode, style, ...rest } = props;
+  const { isDarkMode, ...rest } = props;
   return (
     <DefaultText
       style={[
-        style,
+       // styles,
         {
           color: isDarkMode ? 'white' : 'black',
           opacity: isDarkMode ? 0.6 : 1,

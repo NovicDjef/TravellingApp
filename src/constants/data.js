@@ -67,7 +67,11 @@ const agenceVoyage = [
     {
         id: 1,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -93,7 +97,8 @@ const agenceVoyage = [
     {
         id: 2,
         name: "Garantie Express",
-        Lieu: ["Akwa"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Akwa"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -119,7 +124,8 @@ const agenceVoyage = [
     {
         id: 3,
         name: "Finess Voyage",
-        Lieu: ["Akwa Douche"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Akwa Douche"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -145,7 +151,8 @@ const agenceVoyage = [
     {
         id: 4,
         name: "Tresor Voyage",
-        Lieu: ["Bependa tonaire", "PK 14"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", "PK 14"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -171,7 +178,11 @@ const agenceVoyage = [
     {
         id: 5,
         name: "Buca Voyage",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -197,7 +208,11 @@ const agenceVoyage = [
     {
         id: 6,
         name: "Touristique Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -223,7 +238,11 @@ const agenceVoyage = [
     {
         id: 7,
         name: "United Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -249,7 +268,11 @@ const agenceVoyage = [
     {
         id: 8,
         name: "Avenir Voyage",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -276,7 +299,11 @@ const agenceVoyage = [
      {
         id: 9,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -302,7 +329,11 @@ const agenceVoyage = [
     {
         id: 10,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -328,7 +359,11 @@ const agenceVoyage = [
     {
         id: 11,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -355,7 +390,11 @@ const agenceVoyage = [
     {
         id: 12,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -381,7 +420,11 @@ const agenceVoyage = [
     {
         id: 13,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -407,7 +450,11 @@ const agenceVoyage = [
     {
         id: 14,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -434,7 +481,11 @@ const agenceVoyage = [
     {
         id: 15,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -460,7 +511,11 @@ const agenceVoyage = [
     {
         id: 16,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -486,7 +541,11 @@ const agenceVoyage = [
     {
         id: 17,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -512,7 +571,11 @@ const agenceVoyage = [
     {
         id: 18,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -538,7 +601,11 @@ const agenceVoyage = [
     {
         id: 19,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
@@ -564,7 +631,11 @@ const agenceVoyage = [
     {
         id: 20,
         name: "Generale Express",
-        Lieu: ["Bependa tonaire", "Bonaberie"],
+        description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
+        Lieu: [" A douala nous somme situé a Bependa tonaire", 
+        "A Bafoussam nous sommes situé Binam entrer de la ville", 
+        "A Dschang nous somme situé juste pres de l'université de Dschang", 
+        "A Mbouda nous sommes situé a Balessing, au marché de bagang, Batcham chefferie"],
         prix: [3500, 4000, 5000, 6000 ],
         horaire: [
             "05h00",
