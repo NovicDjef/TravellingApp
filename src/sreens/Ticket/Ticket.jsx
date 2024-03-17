@@ -1,19 +1,27 @@
-import { StyleSheet, View, Dimensions, TouchableOpacity, Image } from 'react-native';
-import React, { useContext } from 'react';
+import { StyleSheet, View, Dimensions, TouchableOpacity, Image, Alert } from 'react-native';
+import React, { useContext, useState } from 'react';
 import DarkMode from '../../utils/darkmode.context';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Text } from '../../utils/theme';
+import { Card, Text } from '../../utils/theme';
 import Dialog from "react-native-dialog";
 import Pdf from 'react-native-pdf';
+import Sieges from '../Home/pages/Sierge';
 
 export default function Ticket({navigation, style}) {
   const { isDarkMode } = useContext(DarkMode);
+  const [showModalDetailRecu, setShowModalDetailRecu] = useState(false)
   const logo = require("../../assets/images/2.jpg")
+  const handleRecu = () => {
+    setShowModalDetailRecu(true)
+    console.warn('showModalDetailRecu :', showModalDetailRecu);
+  }
+ 
   return (
-    <View
+    <Card
+    isDarkMode={isDarkMode}
       style={{
         flex: 1,
-        marginTop: 12, 
+        
       }}
     >
          <View
@@ -23,6 +31,7 @@ export default function Ticket({navigation, style}) {
           alignItems: "center",
           flexDirection: "row",
           paddingHorizontal: 18,
+          marginTop: 12, 
         }}>
           <TouchableOpacity style={{flexDirection: 'row', }} onPress={() => {}}>
              <Icon  name="filter" size={24} color={isDarkMode ? 'white' : 'black'}/>
@@ -40,7 +49,8 @@ export default function Ticket({navigation, style}) {
       <View>
   <Text isDarkMode={isDarkMode} styles={{marginHorizontal: 14, marginVertical: 10}}>06 Novembre 2023 </Text>
 </View>
-        <View 
+        <TouchableOpacity 
+        onPress={handleRecu}
             style={{
                 marginTop: 22,
                 borderWidth: 2,
@@ -92,9 +102,10 @@ export default function Ticket({navigation, style}) {
                 <Text isDarkMode={isDarkMode} styles={{fontSize: 19, fontWeight: 700, color: "black", top: 10}}> 3500.00Frs</Text>
               </View>
             </View>
-        </View>
+        </TouchableOpacity>
 
-        <View 
+        <TouchableOpacity
+        onPress={handleRecu} 
             style={{
                 marginTop: 22,
                 borderWidth: 2,
@@ -146,12 +157,13 @@ export default function Ticket({navigation, style}) {
                 <Text isDarkMode={isDarkMode} styles={{fontSize: 19, fontWeight: 700, color: "black", top: 10}}> 7000.00Frs</Text>
               </View>
             </View>
-        </View>
-
+        </TouchableOpacity>
+        <DetailRecu showModalDetailRecu={showModalDetailRecu} setShowModalDetailRecu={setShowModalDetailRecu} />
 <View>
   <Text isDarkMode={isDarkMode} styles={{marginHorizontal: 14, marginVertical: 10}}>16 Fevrier 2024 </Text>
 </View>
-        <View 
+        <TouchableOpacity 
+        onPress={handleRecu}
             style={{
                 marginTop: 22,
                 borderWidth: 2,
@@ -203,8 +215,9 @@ export default function Ticket({navigation, style}) {
                 <Text isDarkMode={isDarkMode} styles={{fontSize: 19, fontWeight: 700, color: "black", top: 10}}> 5000.00Frs</Text>
               </View>
             </View>
-        </View>
-        <Pdf
+        </TouchableOpacity>
+        <Sieges />
+        {/* <Pdf
             source={logo}
             onLoadComplete={(numberOfPages,filePath) => {
                 console.log(`Number of pages: ${numberOfPages}`);
@@ -223,142 +236,127 @@ export default function Ticket({navigation, style}) {
         width:Dimensions.get('window').width,
         height:Dimensions.get('window').height,
             }}
-        />
+        /> */}
       {/* <Text isDarkMode={isDarkMode}>This is the chats screen</Text> */}
-    </View>
+     
+    </Card>
+
   );
 }
 
-// const DetailRecu = () => {
-//     const { isDarkMode } = useContext(DarkMode);
-//     return(
-//         <Dialog.Container useNativeDriver={true} visible={this.state.displayModalHistory}>
+const DetailRecu = ({showModalDetailRecu, setShowModalDetailRecu}) => {
+  const { isDarkMode } = useContext(DarkMode);
+  return(
+    
+        <Dialog.Container visible={showModalDetailRecu}>
 
-//         <Dialog.Title>Recu</Dialog.Title>
+<Dialog.Title isDarkMode={isDarkMode}>Recu</Dialog.Title>
 
-//         <View>
-//             <View >
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>ffffffffff</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text isDarkMode={isDarkMode}>11111111</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>{I18n.t('TRANSACTION_ID')}</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>ddddddd</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>Date</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>efnefklnfk</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>frfejffkj</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>jfjfjf</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>efkenfkenfn</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>fkrnfkf</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>kjdkfdjdfkj</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>feflkefekfkle</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>efefefef</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>efefefefefefe</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>rflklfl</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>fhfehfehfehg</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>fefefkefe</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>bobobob</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>efefefefe</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>vbvbvbvbvbv</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>{I18n.t('NET_AMOUNT')}</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>efhefhhfhr</Text>
-//                     </View>
-//                 </View>
-//                 <View style={{flexDirection: 'row', marginTop: 10}}>
-//                     <View style={{flex: 1}}>
-//                         <Text isDarkMode={isDarkMode}>bobobodod</Text>
-//                     </View>
-//                     <View style={{flex: 1, alignItems: 'flex-end'}}>
-//                         <Text
-//                             isDarkMode={isDarkMode}>vrkelzksa</Text>
-//                     </View>
-//                 </View>
-//             </View>
+<Card isDarkMode={isDarkMode}>
+    <View style={{margin: 18 }}>
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flex: 1}}>
+                <Text isDarkMode={isDarkMode}>Nom</Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'flex-end'}}>
+                <Text isDarkMode={isDarkMode}>Novic-Djef</Text>
+            </View>
+        </View>
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flex: 1}}>
+                <Text isDarkMode={isDarkMode}>Telephone</Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'flex-end'}}>
+                <Text
+                    isDarkMode={isDarkMode}>690089951</Text>
+            </View>
+        </View>
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flex: 1}}>
+                <Text isDarkMode={isDarkMode}>Numero CNI</Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'flex-end'}}>
+                <Text
+                    isDarkMode={isDarkMode}>10023843</Text>
+            </View>
+        </View>
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flex: 1}}>
+                <Text isDarkMode={isDarkMode}>depart</Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'flex-end'}}>
+                <Text
+                    isDarkMode={isDarkMode}>Douala</Text>
+            </View>
+        </View>
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flex: 1}}>
+                <Text isDarkMode={isDarkMode}>Arrivé</Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'flex-end'}}>
+                <Text
+                    isDarkMode={isDarkMode}>Mbouda</Text>
+            </View>
+        </View>
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flex: 1}}>
+                <Text isDarkMode={isDarkMode}>Numero Siege</Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'flex-end'}}>
+                <Text
+                    isDarkMode={isDarkMode}>12</Text>
+            </View>
+        </View>
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flex: 1}}>
+                <Text isDarkMode={isDarkMode}>Type de bus</Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'flex-end'}}>
+                <Text
+                    isDarkMode={isDarkMode}>VIP</Text>
+            </View>
+        </View>
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flex: 1}}>
+                <Text isDarkMode={isDarkMode}>Prix</Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'flex-end'}}>
+                <Text
+                    isDarkMode={isDarkMode}>6500 Frs</Text>
+            </View>
+        </View>
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flex: 1}}>
+                <Text isDarkMode={isDarkMode}>Categorie bus</Text>
+            </View>
+            <View style={{flex: 1, alignItems: 'flex-end'}}>
+                <Text
+                    isDarkMode={isDarkMode}>A</Text>
+            </View>
+        </View>
+      
+    </View>
 
-//         </View>
 
-//         <Dialog.Button bold={true} label={I18n.t('OK')} onPress={() => { }}/>
 
-//     </Dialog.Container>
-//     )
-// }
+      <View style={{display: "flex", justifyContent: "space-between", alignItems: 'center', flexDirection: "row", marginHorizontal: 12}}>
+        <TouchableOpacity onPress={() => {}} style={{flexDirection: 'row'}}>
+          <Text isDarkMode={isDarkMode}>Imprimer</Text> 
+          <Icon name="print" size={28} color={isDarkMode ? 'white' : 'black'} />
+        </TouchableOpacity>
+        <Dialog.Button bold={true} label={"OK"} onPress={() => setShowModalDetailRecu(false)}/>
+      </View>
+</Card>
+</Dialog.Container>
 
-// const styles = StyleSheet.create({
-//     pdf: {
-//         flex:1,
-//         width:Dimensions.get('window').width,
-//         height:Dimensions.get('window').height,
-//     }
-// });
+  )
+}
+
+
+const styles = StyleSheet.create({
+    // pdf: {
+    //     flex:1,
+    //     width:Dimensions.get('window').width,
+    //     height:Dimensions.get('window').height,
+    // }
+});

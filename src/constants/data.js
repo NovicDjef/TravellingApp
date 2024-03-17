@@ -67,6 +67,7 @@ const agenceVoyage = [
     {
         id: 1,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -97,6 +98,7 @@ const agenceVoyage = [
     {
         id: 2,
         name: "Garantie Express",
+        imageurl: require("../assets/images/fitness.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Akwa"],
         prix: [3500, 4000, 5000, 6000 ],
@@ -124,6 +126,7 @@ const agenceVoyage = [
     {
         id: 3,
         name: "Finess Voyage",
+        imageurl: require("../assets/images/global.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Akwa Douche"],
         prix: [3500, 4000, 5000, 6000 ],
@@ -151,6 +154,7 @@ const agenceVoyage = [
     {
         id: 4,
         name: "Tresor Voyage",
+        imageurl: require("../assets/images/men.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", "PK 14"],
         prix: [3500, 4000, 5000, 6000 ],
@@ -178,6 +182,7 @@ const agenceVoyage = [
     {
         id: 5,
         name: "Buca Voyage",
+        imageurl: require("../assets/images/touristique.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -208,6 +213,7 @@ const agenceVoyage = [
     {
         id: 6,
         name: "Touristique Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -238,6 +244,7 @@ const agenceVoyage = [
     {
         id: 7,
         name: "United Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -268,6 +275,7 @@ const agenceVoyage = [
     {
         id: 8,
         name: "Avenir Voyage",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -299,6 +307,7 @@ const agenceVoyage = [
      {
         id: 9,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -329,6 +338,7 @@ const agenceVoyage = [
     {
         id: 10,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -359,6 +369,7 @@ const agenceVoyage = [
     {
         id: 11,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -390,6 +401,7 @@ const agenceVoyage = [
     {
         id: 12,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -420,6 +432,7 @@ const agenceVoyage = [
     {
         id: 13,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -450,6 +463,7 @@ const agenceVoyage = [
     {
         id: 14,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -481,6 +495,7 @@ const agenceVoyage = [
     {
         id: 15,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -511,6 +526,7 @@ const agenceVoyage = [
     {
         id: 16,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -541,6 +557,7 @@ const agenceVoyage = [
     {
         id: 17,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -571,6 +588,7 @@ const agenceVoyage = [
     {
         id: 18,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -601,6 +619,7 @@ const agenceVoyage = [
     {
         id: 19,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 
@@ -631,6 +650,7 @@ const agenceVoyage = [
     {
         id: 20,
         name: "Generale Express",
+        imageurl: require("../assets/images/generale.jpg"),
         description: " Nous vous garantisons le voyage de vos reves car votre vie est notre priorité ",
         Lieu: [" A douala nous somme situé a Bependa tonaire", 
         "A Bafoussam nous sommes situé Binam entrer de la ville", 

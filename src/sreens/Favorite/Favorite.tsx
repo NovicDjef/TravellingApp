@@ -1,22 +1,23 @@
 import { StyleSheet, View, Image } from 'react-native';
 import React, { useContext } from 'react';
 import DarkMode from '../../utils/darkmode.context';
-import { Text } from '../../utils/theme';
+import { Card, Text } from '../../utils/theme';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Favorite() {
   const { isDarkMode } = useContext(DarkMode);
 
   return (
-    <View
+    <Card
+    isDarkMode={isDarkMode}
       style={{
         flex: 1,
-        marginTop: 12,
-        marginHorizontal: 12
+       
         
       }}
     >
-      <View style={{}}>
+      <View style={{ marginTop: 12,
+        marginHorizontal: 12}}>
 
         {/* image */}
         <View style={{display: "flex", justifyContent: "space-between", flexDirection: "row"}}>
@@ -33,7 +34,7 @@ export default function Favorite() {
         </View>
       </View>
       {/* <Text isDarkMode={isDarkMode}>This is the account screen</Text> */}
-    </View>
+    </Card>
   );
 }
 

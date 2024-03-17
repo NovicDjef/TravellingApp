@@ -37,10 +37,11 @@ export default function Settings() {
   }, [isDarkMode, useDeviceSettings]);
 
   return (
-    <View>
-      <Card style={[styles.card]} isDarkMode={isDarkMode}>
-        <View style={styles.option}>
-          <Text style={[[styles.text]]} isDarkMode={isDarkMode}>
+    
+      <Card isDarkMode={isDarkMode} style={{flex: 1}} >
+        <View style={[styles.card]}>
+          <View style={styles.option}>
+          <Text styles={[[styles.text]]} isDarkMode={isDarkMode}>
             Use device theme
           </Text>
           <Switch
@@ -57,7 +58,7 @@ export default function Settings() {
         <View style={[styles.hr]} />
 
         <View style={styles.option}>
-          <Text style={[[styles.text]]} isDarkMode={isDarkMode}>
+          <Text styles={[[styles.text]]} isDarkMode={isDarkMode}>
             Dark Mode
           </Text>
           <Switch
@@ -70,8 +71,9 @@ export default function Settings() {
             thumbColor={'white'}
           />
         </View>
+        </View>
       </Card>
-    </View>
+    
   );
 }
 
@@ -95,7 +97,7 @@ const styles = StyleSheet.create({
     padding: 12,
   },
   card: {
-    backgroundColor: 'white',
+    backgroundColor: '#4d4a4a',
     margin: 15,
     borderRadius: 8,
   },

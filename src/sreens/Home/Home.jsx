@@ -1,7 +1,7 @@
-import { StyleSheet, View, Dimensions, FlatList, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, View, Dimensions, FlatList, TouchableOpacity, TextInput, Image, ImageBackground } from 'react-native';
 import React, { useContext } from 'react';
 import DarkMode from '../../utils/darkmode.context';
-import { Text } from '../../utils/theme';
+import { Card, Text } from '../../utils/theme';
 import  data  from "../../constants/data"
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { SliderBox } from "react-native-image-slider-box";
@@ -20,10 +20,10 @@ export default function Home() {
 ];
 
   return (
-    <View
+    <Card
+    isDarkMode={isDarkMode}
       style={{
         flex: 1,
-       marginTop: 20
       }}
     >
       <View
@@ -33,6 +33,7 @@ export default function Home() {
           alignItems: "center",
           flexDirection: "row",
           paddingHorizontal: 14,
+          marginTop: 18
         }}>
           <Icon  name="sliders" size={24} color={isDarkMode ? 'white' : 'black'}/>
           <Icon name="user" size={24} color={isDarkMode ? 'white' : 'black'}/>
@@ -75,19 +76,26 @@ export default function Home() {
       showsHorizontalScrollIndicator={false}
       renderItem={({item}) => {
         return(
-          <TouchableOpacity 
-          style={{display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "row",
-              backgroundColor: "#6b7280",
-              flex: 1,
-              height: 140,
-              borderRadius: 20
-          }}
+          <ImageBackground 
+          source={item.imageurl}
+          style={{
+                justifyContent: "center",
+                alignItems: "flex-end",
+                flexDirection: "column",
+                flex: 1,
+                height: 140,
+                borderRadius: 12
+            }}
             >
-              <Text isDarkMode={isDarkMode}>{item.name}</Text>
-          </TouchableOpacity>
+              <View style={{width: 40, height: 40, backgroundColor: "#02b875", bottom: 24, right: 12, borderRadius: 12}}>
+                <Icon name="heart" size={30} color={"red"} style={{marginHorizontal: 5, marginVertical: 6}}/>
+              </View>
+            <TouchableOpacity 
+            
+              >
+                <Text style={{fontSize: 23, color: "white", left: -12, top: 18}} isDarkMode={isDarkMode}>{item.name}</Text>
+            </TouchableOpacity>
+          </ImageBackground>
         )
       }}
       
@@ -118,6 +126,7 @@ export default function Home() {
                 }}
               
               >
+                
                 <Text isDarkMode={isDarkMode}>{item.name}</Text>
               </TouchableOpacity>
             )}
@@ -155,7 +164,7 @@ export default function Home() {
     />
       
       
-    </View>
+    </Card>
   );
 }
 
