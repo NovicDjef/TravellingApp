@@ -216,7 +216,7 @@ export default function Ticket({navigation, style}) {
               </View>
             </View>
         </TouchableOpacity>
-        <Sieges />
+       
         {/* <Pdf
             source={logo}
             onLoadComplete={(numberOfPages,filePath) => {

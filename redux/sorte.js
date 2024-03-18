@@ -1,5 +1,4 @@
-import { CreateStore, combineReducers, applyMiddleware } from "redux";
-import thunk from 'redux-thunk';
+import { createStore, combineReducers } from "redux";
 import { agenceReducer, reservationReducer } from "./Reducer/reducer";
 
 
@@ -9,7 +8,7 @@ const rootReducer = combineReducers({
 })
 
 
-const store = CreateStore(rootReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer,)
 
 export default store;
 

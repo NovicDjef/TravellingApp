@@ -1,20 +1,29 @@
-import { View, Text, TouchableOpacity } from 'react-native'
-import React, { Component, useState } from 'react'
+import { View, TouchableOpacity } from 'react-native'
+import React, { useContext, useState } from 'react'
+import { Text, Card } from '../../../utils/theme'
+import DarkMode from '../../../utils/darkmode.context';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+
 
 export default function ReservationScreen() {
+    const { isDarkMode } = useContext(DarkMode);
     const [currentSrenn, setCurrentSrenn] = useState("premier")
   return (
-    <View 
+   <Card 
+    style={{
+        flex: 1,
+        }}>
+     <View 
         style={{
-            flex: 1,
             marginTop: 12
         }}
         >
             {/* Title reservations */}
-      <Text>ReservationScreen</Text>
+      <Text isDarkMode={isDarkMode}>ReservationScreen</Text>
       
         {/* formulaire reservation */}
-        {currentSrenn === "premier" && <Ecran1 />}
+        {currentSrenn === "premier" && <Ecran1 setCurrentSrenn={setCurrentSrenn} />}
         {currentSrenn === "deuxieme" && <Ecran2 />}
         {currentSrenn === "Troisieme" && <Ecran3 />}
       {/* buttonde next & soumission */}
@@ -22,16 +31,18 @@ export default function ReservationScreen() {
 
       </View>
     </View>
+   </Card>
   )
 }
 
 // ecran 1
-const Ecran1 = () => {
+const Ecran1 = ({ setCurrentSrenn }) => { // Passez setCurrentSrenn en tant que prop
     return(
         <>
         <View>
             <Text>Ecran 1</Text>
-            <TouchableOpacity onPress={() => setCurrentSrenn("deuxieme")} > <Text>click</Text></TouchableOpacity>
+            {/* Enveloppez le texte dans un composant Text */}
+            <TouchableOpacity onPress={() => setCurrentSrenn("deuxieme")} ><Text>click</Text></TouchableOpacity>
         </View>
         </>
     )

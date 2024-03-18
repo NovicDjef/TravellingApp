@@ -1,13 +1,18 @@
 import { StyleSheet, View, Dimensions, FlatList, TouchableOpacity, TextInput, Image, ImageBackground } from 'react-native';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import DarkMode from '../../utils/darkmode.context';
 import { Card, Text } from '../../utils/theme';
 import  data  from "../../constants/data"
+import { useSelector, useDispatch } from 'react-redux';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { SliderBox } from "react-native-image-slider-box";
 import { useNavigation } from '@react-navigation/native';
+import { fetchAgenceSuccess } from '../../../redux/Action/Action';
+
 
 export default function Home() {
+  const agences = useSelector((state) => state.agences);
+  const dispatch = useDispatch()
   const navigation = useNavigation();
   const { isDarkMode } = useContext(DarkMode);
   const images = [
@@ -18,7 +23,13 @@ export default function Home() {
     require("../../assets/images/5.jpeg"),
     
 ];
-
+const handleDetail = (item) => {
+  navigation.navigate('DetailAgence', { detail: item });
+}
+useEffect(() => {
+dispatch(fetchAgenceSuccess(data.agenceVoyage))
+console.log("les agence : ", data.agenceVoyage)
+}, [dispatch])
   return (
     <Card
     isDarkMode={isDarkMode}
@@ -39,13 +50,14 @@ export default function Home() {
           <Icon name="user" size={24} color={isDarkMode ? 'white' : 'black'}/>
       </View>
       <View style={styles.container}>
-        <Icon name="search" size={24} style={styles.icon} />
-        <TextInput
-          placeholder="Rechercher..."
-          style={styles.input}
-          placeholderTextColor="#888"
-        />
-    </View>
+          <Icon name="search" size={24} style={styles.icon} />
+          <TextInput
+            placeholder="Rechercher..."
+            style={styles.input}
+            placeholderTextColor="#888"
+          />  
+          <Icon name="filter" size={24} style={styles.icon} />
+      </View>
           <View
             style={{
               display: "flex",
@@ -91,7 +103,7 @@ export default function Home() {
                 <Icon name="heart" size={30} color={"red"} style={{marginHorizontal: 5, marginVertical: 6}}/>
               </View>
             <TouchableOpacity 
-            
+            onPress={() => handleDetail(item)}
               >
                 <Text style={{fontSize: 23, color: "white", left: -12, top: 18}} isDarkMode={isDarkMode}>{item.name}</Text>
             </TouchableOpacity>

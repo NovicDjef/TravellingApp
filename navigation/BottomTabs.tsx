@@ -1,5 +1,5 @@
 import { StyleSheet, Platform } from 'react-native';
-import React, { useContext } from 'react';
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from "react-native-vector-icons/FontAwesome";
 import Favorite from '../src/sreens/Favorite/Favorite';
@@ -7,13 +7,10 @@ import Ticket from "../src/sreens/Ticket/Ticket"
 import Home from '../src/sreens/Home/Home';
 import Settings from '../src/sreens/Settings/Settings';
 import { regular, semiBold } from '../src/utils/fonts';
-import { Card } from '../src/utils/theme';
-import DarkMode from '../src/utils/darkmode.context';
 
 const BottomTabNavigator = createBottomTabNavigator();
 
 export default function BottomTab() {
-  const { isDarkMode } = useContext(DarkMode);
   //   const tabBarHeight = useBottomTabBarHeight();
   return (
     // <Card isDarkMode={isDarkMode}>

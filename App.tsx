@@ -486,6 +486,8 @@ import DarkMode from './src/utils/darkmode.context';
 import { useEffect, useState } from 'react';
 import { Appearance, useColorScheme, StatusBar } from 'react-native';
 import React from 'react';
+import { Provider } from 'react-redux';
+import store from './redux/sorte';
 
 export default function App() {
   
@@ -530,18 +532,20 @@ export default function App() {
 
   
   return (
-    <DarkMode.Provider
-      value={{
-        isDarkMode,
-        setIsDarkMode,
-        useDeviceSettings,
-        setUseDeviceSettings,
-      }}
-    >
-      <NavigationContainer theme={isDarkMode ? CustomDarkTheme : DefaultTheme}>
-        {/* <StatusBar style={isDarkMode ? 'light' : 'dark'} /> */}
-        <StackNavigator />
-      </NavigationContainer>
-    </DarkMode.Provider>
+    <Provider store={store}>
+      <DarkMode.Provider 
+        value={{
+          isDarkMode,
+          setIsDarkMode,
+          useDeviceSettings,
+          setUseDeviceSettings,
+        }}
+      >
+        <NavigationContainer theme={isDarkMode ? CustomDarkTheme : DefaultTheme}>
+          {/* <StatusBar style={isDarkMode ? 'light' : 'dark'} /> */}
+          <StackNavigator />
+        </NavigationContainer>
+      </DarkMode.Provider>
+    </Provider>
   );
 }

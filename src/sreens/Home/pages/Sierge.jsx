@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Image, Text, TouchableOpacity, StyleSheet } from 'react-native';
-
+import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text } from '../../../utils/theme';
 const Sieges = () => {
   const [selectedSeat, setSelectedSeat] = useState(null);
 
@@ -21,11 +21,11 @@ const Sieges = () => {
             key={seatNumber}
             style={[styles.seat, isSeatSelected && styles.selectedSeat]}
             onPress={() => handleSeatSelection(seatNumber)}>
-            <Image
+            {/* <Image
               source={require('../../../assets/images/1.jpg')} // Image représentant une place assise
               style={styles.seatImage}
-            />
-            {/* <Text style={styles.seatNumber}>{seatNumber}</Text> Numéro de siège */}
+            /> */}
+            {/* <Text style={styles.seatNumber}>{seatNumber}</Text>  */}
           </TouchableOpacity>
         );
       }
@@ -41,12 +41,15 @@ const Sieges = () => {
   return (
     <View style={styles.container}>
       <View style={styles.leftRow}>
+      <Text style={styles.seatNumber}>{seatNumber}</Text>
         {renderSeats(10, 3)} {/* 10 rangées de 3 sièges */}
       </View>
       <View style={styles.middleRow}>
+      <Text style={styles.seatNumber}>{seatNumber}</Text>
         {renderSeats(10, 2)} {/* 10 rangées de 2 sièges */}
       </View>
       <View style={styles.rightRow}>
+      <Text style={styles.seatNumber}>{seatNumber}</Text>
         {renderSeats(10, 7)} {/* 10 rangées de 7 sièges */}
       </View>
     </View>

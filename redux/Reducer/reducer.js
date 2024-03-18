@@ -2,7 +2,7 @@ import * as ActionType from "../Types/type"
 import data from "../../src/constants/data"
 
 initialState = {
-    agences : [],
+    agences : data.agenceVoyage,
     loadingAgneces: false,
     errorAgence: null,
     loadingReservation: false,
