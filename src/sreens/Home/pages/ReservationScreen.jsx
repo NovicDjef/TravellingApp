@@ -26,6 +26,7 @@ export default function ReservationScreen() {
         {currentSrenn === "premier" && <Ecran1 setCurrentSrenn={setCurrentSrenn} />}
         {currentSrenn === "deuxieme" && <Ecran2 />}
         {currentSrenn === "Troisieme" && <Ecran3 />}
+        {currentSrenn === "Siege" && <Sierge />}
       {/* buttonde next & soumission */}
       <View>
 
@@ -40,7 +41,7 @@ const Ecran1 = ({ setCurrentSrenn }) => { // Passez setCurrentSrenn en tant que 
     return(
         <>
         <View>
-            <Text>Ecran 1</Text>
+            <Text>Formulaire de prise d'informations de voyages</Text>
             {/* Enveloppez le texte dans un composant Text */}
             <TouchableOpacity onPress={() => setCurrentSrenn("deuxieme")} ><Text>click</Text></TouchableOpacity>
         </View>
@@ -54,6 +55,7 @@ const Ecran2 = () => {
         <>
         <View>
             <Text>Ecran 2</Text>
+            <TouchableOpacity onPress={() => setCurrentSrenn("Troisieme")} ><Text>click</Text></TouchableOpacity>
         </View>
         </>
     )
@@ -65,7 +67,20 @@ const Ecran3 = () => {
         <>
         <View>
             <Text>Ecran 3</Text>
+            <TouchableOpacity onPress={() => setCurrentSrenn("Siege")} ><Text>click</Text></TouchableOpacity>
         </View>
+        </>
+    )
+}
+
+// Ecran 4
+const Sierge = () => {
+    return(
+        <>
+            <View>
+                <Text>Siege</Text>
+                <TouchableOpacity onPress={() => setCurrentSrenn("Troisieme")} ><Text>click</Text></TouchableOpacity>
+            </View>
         </>
     )
 }

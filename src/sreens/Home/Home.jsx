@@ -7,7 +7,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { SliderBox } from "react-native-image-slider-box";
 import { useNavigation } from '@react-navigation/native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import { fetchAgenceSuccess } from '../../../redux/Action/Action';
+import LinearGradient from 'react-native-linear-gradient';
 
 
 export default function Home() {
@@ -88,26 +90,37 @@ console.log("les agence : ", data.agenceVoyage)
       showsHorizontalScrollIndicator={false}
       renderItem={({item}) => {
         return(
-          <ImageBackground 
-          source={item.imageurl}
-          style={{
-                justifyContent: "center",
-                alignItems: "flex-end",
-                flexDirection: "column",
-                flex: 1,
-                height: 140,
-                borderRadius: 12
-            }}
-            >
-              <View style={{width: 40, height: 40, backgroundColor: "#02b875", bottom: 24, right: 12, borderRadius: 12}}>
-                <Icon name="heart" size={30} color={"red"} style={{marginHorizontal: 5, marginVertical: 6}}/>
-              </View>
-            <TouchableOpacity 
-            onPress={() => handleDetail(item)}
+         
+              <ImageBackground 
+            source={item.imageurl}
+            style={{
+                  justifyContent: "center",
+                  alignItems: "flex-end",
+                  flexDirection: "column",
+                  flex: 1,
+                  height: 140,
+                  borderWidth: 1, // Ajoutez une bordure
+        borderColor: 'transparent', // Rendre la bordure transparente
+        borderRadius: 20
+                 
+              }}
               >
-                <Text style={{fontSize: 23, color: "white", left: -12, top: 18}} isDarkMode={isDarkMode}>{item.name}</Text>
-            </TouchableOpacity>
-          </ImageBackground>
+                 <LinearGradient 
+                    colors={['transparent', '#18181b']} 
+                    style={{ height: 140, width: "100%"}}
+                    start={{ x: 0.5, y: 0 }} 
+                    end={{ x: 0.5, y: 0.9 }}
+                  >
+                <View style={{position: "absolute", width: 40, height: 40, backgroundColor: "#02b875", right: 12, top: 10, borderRadius: 12}}>
+                  <Icon name="heart" size={30} color={"red"} style={{marginHorizontal: 5, marginVertical: 6}}/>
+                </View>
+              <TouchableOpacity 
+                onPress={() => handleDetail(item)}
+                >
+                  <Text style={{fontSize: 23, color: "white", top: 98, textAlign: "center"}} isDarkMode={isDarkMode}>{item.name}</Text>
+              </TouchableOpacity>
+              </LinearGradient>
+            </ImageBackground>
         )
       }}
       
