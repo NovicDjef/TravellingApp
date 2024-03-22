@@ -2,7 +2,7 @@ import { ImageBackground, TouchableOpacity, View, FlatList, ScrollView } from 'r
 import React, { useContext } from 'react'
 import DarkMode from '../../utils/darkmode.context';
 import { Card, Text } from '../../utils/theme';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -39,13 +39,13 @@ export default function DetailAgence({ route, navigation }) {
             onPress={() => navigation.goBack()}
             style={{width: 35, height: 35, backgroundColor: "#2319194f", borderRadius: 8}}
           >
-            <Icon style={{left: 4, top: 2}} name="arrow-left" size={28} color={isDarkMode ? 'white' : '#adadad'}/>
+            <Icon style={{left: 4, top: 2}} name="chevron-back" size={28} color={isDarkMode ? 'white' : '#02b875'}/>
          </TouchableOpacity>
          {/* ajouter le géolocalitaion du cite */}
          <TouchableOpacity 
           onPress={() => {}}
           style={{width: 35, height: 35, backgroundColor: "#2319194f"}}>
-            <Icon style={{left: 4, top: 2}} name="bool" size={28} color={isDarkMode ? 'white' : '#adadad'}/>
+            <Icon style={{left: 4, top: 2}} name="bookmarks" size={28} color={isDarkMode ? 'white' : '#02b875'}/>
          </TouchableOpacity>
       </View>
       <LinearGradient 

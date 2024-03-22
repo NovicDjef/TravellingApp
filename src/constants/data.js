@@ -62,6 +62,17 @@ const destinations = [
     },
 ]
 
+const users = [
+    {
+        id: 1,
+        sexe: "Homme",
+    },
+    {
+        id: 1,
+        sexe: "Femme",
+    }
+]
+
 
 const agenceVoyage = [
     {
@@ -90,6 +101,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -122,6 +134,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: false,
@@ -154,6 +167,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -186,6 +200,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -218,7 +233,8 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
-        destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
+        depart: ["Douala","Yaoundé"],
+        destination: ["Douala","Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
         place: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]
@@ -250,6 +266,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -282,6 +299,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -314,6 +332,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -347,6 +366,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -379,6 +399,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -411,6 +432,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -444,6 +466,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -476,6 +499,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -508,6 +532,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -541,6 +566,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -573,6 +599,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -605,6 +632,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -637,6 +665,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -669,6 +698,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -701,6 +731,7 @@ const agenceVoyage = [
             "16h00",
             "17h00"
         ],
+        depart: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         destination: ["Bafoussam", "Dschang", "Douala", "Mbouda", "Balessing", "Kribi", "Balevin", "Batcham", "Badjoun", "Yaoundé"],
         status: ["classique", "VIP"],
         reservation: true,
@@ -713,5 +744,6 @@ const agenceVoyage = [
 export default {
     destinations,
     agenceVoyage,
-    carousselData
+    carousselData,
+    users,
 }
